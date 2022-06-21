@@ -1,0 +1,60 @@
+<html>
+
+<style>
+    body, html {font-family:arial; width: 100%; height: 100%; margin: 0; padding: 0}
+    .row-container {display: flex; width: 100%; height: 100%; flex-direction: column; overflow: hidden; }
+    .header-row {font-size:14pt; padding-left: 10px; line-height: 150%;}
+    .network-row {flex-grow: 1; border: none; margin: 0; padding: 0; }
+    .desc-row {font-size:12pt; margin: 0; padding-left: 10px; line-height: 120%}
+    h1 {font-size:16pt; margin-bottom: 10px}
+    p {margin-bottom: 10px; margin-top: 0px;}
+    a {font-style:italic; text-decoration:none; color: black;}
+    a:hover {text-decoration:underline}
+    summary {padding-left: 10px; margin-bottom: 10px; }
+</style>
+
+<head>
+</head>
+
+<body>
+
+    <div class="row-container">
+
+        <div class="header-row">
+            <p>
+                <h1>Interactive citation network:</h1>
+                Lotter LD, Kohl SH, Gerloff C, Bell L, Niephaus A, Kruppa JA, Dukart J, Schulte-Rüther M, Reindl V, & Konrad K: <br>
+                <b><a href="">The neurobiological basis of interpersonal interaction: Evidence from a multimodal data fusion approach</a></b> 
+            </p>
+        </div>
+
+        <details>
+            <summary>Show legend</summary>
+            <div class="desc-row">
+                <p>
+                    <b>Description:</b> The network contains all publications included in our meta-analysis of functional magnetic resonance imaging (fMRI) and functional near-infrared spectroscopy (fNIRS) experiments assessing interpersonal neural synchrony (INS) during interaction.
+                    Each node represents one publication, edges indicate "citations" (A→B is to be interpreted as "study A cites study B"). Links between studies are build from references and citation lists obtained from <a href="https://opencitations.net">OpenCitations</a> data.
+                    The OpenCitations database contains only references and citations if these have been made openly available by the publishers. Thus, the edges in this network are not all-encompassing. 
+                    Node sizes are based on citation-counts within the network. 
+                    Brains plotted in each node show the brain locations where INS has been detected in the respective publication. 
+                    For fNIRS publications (blue nodes), grey markers additionally indicate channel positions and thus the brain coverage.
+                </p>
+                <p>
+                    <b>Usage:</b> You can move around the network (and individual nodes) with your mouse or finger or the arrow buttons. You can zoom in with the "+" and out with the "-" button.
+                    Hovering over a node will show a window with a link to each publication, information on each "experiment" (= data from a unique set of subjects) associated with the publication, and citation/reference counts. 
+                    Citation/reference counts are provided for the displayed network (NW) and the overall OpenCitations database (OC).
+                </p>
+                <p>
+                    <b>Abbreviations:</b> fMRI = functional magnetic resonance imaging, fNIRS = functional near-infrared spectroscopy, INS = interpersonal neural synchrony, ISC = inter-subject correlation, 
+                    JA = joint attention, JAct = joint action, subj = subjects, y = years.
+                </p>
+            </div>
+        </details>
+
+        <iframe src="citenet.html" class="network-row"></iframe>
+
+    </div>  
+
+</body>
+
+</html>
